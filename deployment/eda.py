@@ -4,12 +4,13 @@ import pandas as pd  # For data manipulation and analysis
 import plotly.express as px  # For interactive data visualization
 from phik import phik_matrix  # For calculating correlation between mixed data types
 import numpy as np  # For numerical operations
+import os
 
 # Cache the data loading function for better performance
 @st.cache_data
 def load_data():
     # Load the dataset from a CSV file
-    data = pd.read_csv('d:\diabetes-risk-assessment-ml-main\deployment\cdc_diabetes_health_indicators.csv')
+    data = pd.read_csv(os.path.join(os.path.dirname(__file__), 'cdc_diabetes_health_indicators.csv'))
     
     # Create age_group column based on the 'Age' column
     conditions = [
