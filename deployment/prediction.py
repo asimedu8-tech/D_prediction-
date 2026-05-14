@@ -9,7 +9,7 @@ import os
 # =========================
 # LOAD MODEL
 # =========================
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(__file__)
 MODEL_PATH = os.path.join(BASE_DIR, "models", "tuned_model.pkl")
 
 with open(MODEL_PATH, "rb") as f:
